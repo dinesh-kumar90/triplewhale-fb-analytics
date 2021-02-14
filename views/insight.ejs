@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Campaign Insight</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto">
+    <h1>Campaign Insight</h1>
+    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+    <table class="min-w-full divide-y divide-gray-200">
+        <tbody>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campaign Name</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%=action.name%></td>
+            </tr>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campaign Spend</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%=action.spend%></td>
+            </tr>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campaign Revenue</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%=action.revenue%></td>
+            </tr>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campaign ROAS</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%=action.roas%></td>
+            </tr>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campaign Run Time</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%=action.daysAgo%> days</td>
+            </tr>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campaign Start Date</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%=action.campaignStart%></td>
+            </tr>
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campaign Action?</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%=action.message%></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Insight Date
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Impression
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Spend
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                       CPM
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        CPC
+                     </th>
+                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Revenue
+                     </th>
+                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        ROAS
+                     </th>
+                    <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <% insightsData.forEach(function(insight) {%>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <%=insight.createdAt%>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <%=insight.impressions%>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <%=insight.spend%>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <%=insight.cpm%>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <%=insight.cpc%>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <%=insight.revenue%>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <%=insight.roas%>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                      
+                    </td>
+                  </tr>
+                  <%});%>
+                  <!-- More items... -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
