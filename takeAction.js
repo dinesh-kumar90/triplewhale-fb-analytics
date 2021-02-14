@@ -21,8 +21,8 @@ app.use(session({
 
 const port = process.env.PORT || 3001
 
-const appId = '412831599783770'
-const appSecret = '62f7f973d42aa78a962344d6f9846db7'
+const appId = 'FB_APP_ID'
+const appSecret = 'FB_APP_SECRET'
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

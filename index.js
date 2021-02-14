@@ -20,8 +20,8 @@ app.use(session({
 
 const port = process.env.PORT || 3000
 
-const appId = '412831599783770'
-const appSecret = '62f7f973d42aa78a962344d6f9846db7'
+const appId = 'FB_APP_ID'
+const appSecret = 'FB_APP_SECRET'
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,7 +29,7 @@ app.set('view engine', 'ejs');
 //setup public folder
 app.use(express.static('./public'));
 
-let accessToken = 'EAADJ2wKgiRsBANntz3IMDnYvNBnGJevFZBTqOqrqPQGGP21ZAqZCx7FHfDk9RXocl8uHTFp07Be1s6O7UxtqgrLZCMtMa0UiCB8Hz9BP23zlHISeOzp5o6bdwWXqYufMCNiZCHk3KjczNqfy3q8xCcwRg9iOLDzyl057BFfyA5XuMzuOQ1ZBrTRAYYYHqODka1OSVbHkF4CTXWokX00xmPz7IeN6GqL4abNu36xWU3ZCgZDZD';
+
 const apiUrl = 'https://graph.facebook.com/v9.0/';
 
 

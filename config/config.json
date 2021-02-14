@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "pwjaxlouwehcol",
-    "password": "3032568e1a9781b88b0710734bdba74c24b92dbad56896c684ecad9623c543cd",
-    "database": "d82i1nffslon15",
-    "host": "ec2-23-20-70-32.compute-1.amazonaws.com",
+    "username": "root",
+    "password": "",
+    "database": "triplewhale",
+    "host": "127.0.0.1",
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL"
   }
